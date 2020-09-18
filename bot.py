@@ -171,22 +171,22 @@ app = Client("LeechBot",
 
 
 #this text message handler
-msg_handler = MessageHandler(msg_handler_f,Filters.text & ~Filters.command(["start","help"]))
+msg_handler = MessageHandler(msg_handler_f,pyrogram.Filters.text & ~Filters.command(["start","help"]))
 app.add_handler(msg_handler)
 
 # /start & /help command handler 
-start_msg_handler = MessageHandler(start_msg_handler_f,Filters.command(["start","help"]))
+start_msg_handler = MessageHandler(start_msg_handler_f,pyrogram.Filters.command(["start","help"]))
 app.add_handler(start_msg_handler)
 
 # Image & thumbnail Handler 
-app.add_handler(MessageHandler(img_handler_f,Filters.photo))
+app.add_handler(MessageHandler(img_handler_f,pyrogram.Filters.photo))
 
 #Set_thumbnail_inline_answer_handler
 call_back_button_handler = CallbackQueryHandler(button)
 app.add_handler(call_back_button_handler)
 
 #for video & file 
-app.add_handler(MessageHandler(file_handler, Filters.document | Filters.video))
+app.add_handler(MessageHandler(file_handler, pyrogram.Filters.document | pyrogram.Filters.video))
 
 # service Start function
 app.run()
