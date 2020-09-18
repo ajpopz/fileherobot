@@ -2,7 +2,7 @@
 import pyrogram
 from pyrogram import Client
 from pyrogram.handlers import MessageHandler
-
+from pyrogram.types import Message, CallbackQuery, InlineQuery, InlineKeyboardMarkup, ReplyKeyboardMarkup, Update
 
 from creds import config
 import math
@@ -175,7 +175,7 @@ msg_handler = MessageHandler(msg_handler_f, pyrogram.Filters.text & ~Filters.com
 app.add_handler(msg_handler)
 
 # /start & /help command handler 
-start_msg_handler = MessageHandler(start_msg_handler_f,pyrogram.Filters.command(["start","help"]))
+start_msg_handler = MessageHandler(start_msg_handler_f, Filters.command(["start","help"]))
 app.add_handler(start_msg_handler)
 
 # Image & thumbnail Handler 
