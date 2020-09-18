@@ -2,7 +2,6 @@
 import pyrogram
 from pyrogram import (
     Client,
-    MessageHandler, 
     CallbackQueryHandler,
     CallbackQuery
 ) 
