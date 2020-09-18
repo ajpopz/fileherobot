@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 import pyrogram
 from pyrogram import (
-    Client,
-    CallbackQueryHandler,
+    Client, 
     CallbackQuery
 ) 
 from creds import config
