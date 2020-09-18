@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import pyrogram
 from pyrogram import Client
+from pyrogram.filters import *
 from pyrogram.handlers import MessageHandler
 from pyrogram.types import Message, CallbackQuery, InlineQuery, InlineKeyboardMarkup, ReplyKeyboardMarkup, Update
 
