@@ -1,9 +1,6 @@
 #!/usr/bin/env python3
 import pyrogram
-from pyrogram import (
-    Client, 
-    CallbackQuery
-) 
+from pyrogram import Client
 from creds import config
 import math
 import time
