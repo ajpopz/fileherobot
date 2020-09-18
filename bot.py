@@ -172,7 +172,7 @@ app = Client("LeechBot",
 
 
 #this text message handler
-msg_handler = MessageHandler(msg_handler_f, Filters.text & ~Filters.command(["start","help"]))
+msg_handler = MessageHandler(msg_handler_f, filters.text & ~Filters.command(["start","help"]))
 app.add_handler(msg_handler)
 
 # /start & /help command handler 
